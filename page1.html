@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Gradient Background Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #5f2c82);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 50px;
+      height: 100vh;
+    }
+
+    .text, .video {
+      width: 45%;
+      padding: 20px;
+      color: white;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInMove 1.2s ease-in forwards;
+    }
+
+    .text {
+      animation-delay: 0.2s;
+            width: 100%;
+      align-items: center;
+      text-align: center;
+      margin-top: 15%;
+
+    }
+
+    .video {
+      animation-delay: 0.4s;    
+    }
+
+    .video video {
+  width: 100%;
+  max-width: 500px; /* limit width */
+  height: auto;
+  max-height: 700px; /* optional: limit height */
+  border-radius: 10px;
+  object-fit: cover; /* maintains aspect ratio and crop if needed */
+}
+
+    .text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .text p {
+      font-size: 1.2rem;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInMove {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- Section 1 -->
+  <section class="reverse">
+    <div class="text">
+     <h2>What is Dopamine and How It Works</h2>
+      <p>Dopamine is a chemical in your brain that helps you feel happy, motivated, and excited when you do something enjoyable—like eating your favorite food, playing a game, or achieving a goal.
+It’s often called the “feel-good” chemical.</p>
+      <a href="extra.html">Learn More</a>
+    </div>
+    <div class="video">
+      <video src="Dopaminergic neurons _medicalanimation _medicaleducation _patientexperience  _pharma(1080P_HD).mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="reverse">
+    <div class="text">
+      <h2>How Dopamine Affects Everyday Actions</h2>
+      <p>Dopamine is like your brain’s reward manager. It affects your daily actions by making you want to do things that give you pleasure or satisfaction. 1. It Drives Motivation 2. It Builds Habits
+
+</p>
+      <a href="extra.html">Learn More</a>
+    </div>
+    <div class="video">
+      <video src="neurons2.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <div class="text">
+      <h2>The Role of Anticipation and Addiction</h2>
+      <p>1. Anticipation – The Dopamine Buildup
+      Dopamine isn’t just released when you get a reward…
+      👉 It starts before the reward – when you expect something good to happen.</p>
+      <p>2. Addiction – Stuck in the Dopamine Loop
+      When you repeat the same feel-good thing too often (like scrolling, gaming, sugar), your brain gets used to high dopamine.</p>
+      <p>
+      ⚠️ This causes two problems:
+      You need more of it to feel the same joy.
+      You lose interest in normal things (study, work, relationships).</p>
+      <a href="extra.html">Learn More</a>
+    </div>
+    <div class="video">
+      <video src="neurons.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradient Background Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #5f2c82);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 50px;
+      height: 100vh;
+    }
+
+    .text, .video {
+      width: 45%;
+      padding: 20px;
+      color: white;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInMove 1.2s ease-in forwards;
+    }
+
+    .text {
+      animation-delay: 0.2s;
+    }
+
+    .video {
+      animation-delay: 0.4s;
+    }
+   .video video {
+  width: 100%;
+  max-width: 500px; /* limit width */
+  height: auto;
+  max-height: 600px; /* optional: limit height */
+  border-radius: 10px;
+  object-fit: cover; /* maintains aspect ratio and crop if needed */
+}
+
+    .text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .text p {
+      font-size: 1.2rem;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInMove {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1 -->
+  <section>
+    <div class="text">
+      <h2>1. Why the Body Stores Fat</h2>
+      <p>Fat is not your enemy — it’s your body’s way of storing energy for later.</p>
+      <p>In early human life, it helped people survive when food was unavailable.</p>
+      <p>So even today, your body stores extra calories as fat in places like the stomach, thighs, and face.</p>
+
+      <!-- <a href="extra.html">Learn More</a> -->
+    </div>
+    <div class="video">
+      <video src="video1.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="reverse">
+    <div class="text">
+     <h2> 2. Dopamine’s Role in Food Cravings</h2>
+     <p>Dopamine is released when you eat tasty, high-calorie foods — especially sugar and junk food.</p>
+     <p>This creates a reward loop: eat → feel good → repeat.</p>
+     <p>Over time, your brain gets addicted to these easy dopamine hits.</p>
+ <!-- <a href="extra.html">Learn More</a> -->
+    </div>
+    <div class="video">
+      <video src="video2.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <div class="text">
+     <h2> 3. The Modern Problem: Eating Without Energy Use</h2>
+     <p>Unlike the past, we now eat more but move less.</p>
+     <p>The brain still wants the reward (dopamine), but the body doesn’t use up that energy.</p>
+     <p>Result? Fat builds up, even without overeating too much — it’s a mismatch between reward and reality.</p>
+ </div>
+    <div class="video">
+      <video src="video3.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+</body>
+</html>

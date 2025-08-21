@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Human Psychology Scroll Video</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .video-section {
+      height: 100vh;
+      position: relative;
+    }
+
+    #scroll-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .overlay-text {
+      color: white;
+      z-index: 2;
+      position: relative;
+      font-size: 2rem;
+    }
+
+    .spacer {
+      height: 200vh;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #64e502;
+    }
+
+    .scroll-section {
+      padding: 50px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+    }
+
+    .scroll-wrapper {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .scroll-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      scroll-snap-align: start;
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      background: black;
+    }
+
+    .scroll-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .scroll-item:hover video {
+      transform: scale(1.05);
+    }
+
+    .text-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      z-index: 2;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .text-overlay h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+
+    .text-overlay p {
+      font-size: 1rem;
+    }
+
+    .extra-section {
+      background: #343434;
+      color: rgb(255, 255, 255);
+      padding: 100px 20px;
+      text-align: center;
+      height: 400px;
+    }
+
+     .extra1-section {
+      background: #000000;
+      color: rgb(255, 255, 255);
+      padding: 100px 20px;
+      text-align: center;
+      height: 400px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">PsycheMind</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: Scroll Video -->
+  <section class="video-section">
+    <video id="scroll-video" src="3d video final.mp4" muted></video>
+    <div class="overlay-text">
+      <h1>Human Psychology</h1>
+      <p>The science of the mind and behavior.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Spacer -->
+  <div class="spacer">
+    <h2 style="color: white; margin-top: 100vh;"></h2>
+  </div>
+
+  <!-- SECTION 3: Horizontal Scroll Cards with Video -->
+  <section class="scroll-section">
+    <div class="scroll-wrapper">
+      <a href="page1.html" class="scroll-item">
+        <div class="text-overlay">
+          <h3>Dopamine</h3>
+          <p>The Invisible Driver of Human Behavior</p>
+        </div>
+        <video src="dnas.mp4" muted autoplay loop playsinline></video>
+      </a>
+
+      <a href="page2.html" class="scroll-item">
+        <div class="text-overlay">
+          <h3>The Evolution Trap</h3>
+          <p>Why Our Brain Still Saves Energy</p>
+        </div>
+        <video src="neurons.mp4" muted autoplay loop playsinline></video>
+      </a>
+
+      <a href="page3.html" class="scroll-item">
+        <div class="text-overlay">
+          <h3>The Fat Story</h3>
+          <p>How Dopamine and Food Shape Our Body</p>
+        </div>
+        <video src="digital.mp4" muted autoplay loop playsinline></video>
+      </a>
+
+      <a href="page4.html" class="scroll-item">
+        <div class="text-overlay">
+          <h3>Digital Dopamine</h3>
+          <p>How Screens Are Hijacking Our Brain</p>
+        </div>
+        <video src="digital.mp4" muted autoplay loop playsinline></video>
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Call to Action -->
+  <section class="extra-section">
+    <h2>About BrainBlog</h2>
+    <p>We’re passionate about exploring how the brain works, from behavior to biology to thought.</p>
+  </section>
+
+   <!-- SECTION 5: Call to Action -->
+  <section class="extra1-section">
+    <h2>Latest Psychology Article</h2>
+    <p>Dive into topics like memory, behavior, decision-making, and emotional intelligence..</p>
+  </section>
+
+  <!-- JavaScript: Scroll-Controlled Video -->
+  <script>
+    const video = document.getElementById("scroll-video");
+
+    let targetTime = 0;
+    let currentTime = 0;
+    let duration = 0;
+
+    video.addEventListener("loadedmetadata", () => {
+      duration = video.duration;
+      video.pause();
+
+      const scrollArea = document.querySelector(".spacer");
+      const maxScroll = scrollArea.offsetTop + scrollArea.offsetHeight - window.innerHeight;
+
+      const animate = () => {
+        const scrollTop = window.scrollY;
+        const scrollFraction = Math.min(scrollTop / maxScroll, 1);
+        targetTime = scrollFraction * duration;
+
+        currentTime += (targetTime - currentTime) * 0.1;
+        currentTime = Math.min(duration, Math.max(0, currentTime));
+        video.currentTime = currentTime;
+
+        requestAnimationFrame(animate);
+      };
+
+      animate();
+    });
+  </script>
+
+  <!-- JavaScript: Optional Fade-In Observer -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

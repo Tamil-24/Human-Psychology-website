@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradient Background Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #5f2c82);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 50px;
+      height: 100vh;
+    }
+
+    .text, .video {
+      width: 45%;
+      padding: 20px;
+      color: white;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInMove 1.2s ease-in forwards;
+    }
+
+    .text {
+      animation-delay: 0.2s;
+    }
+
+    .video {
+      animation-delay: 0.4s;
+    }
+
+       .video video {
+  width: 100%;
+  max-width: 500px; /* limit width */
+  height: auto;
+  max-height: 600px; /* optional: limit height */
+  border-radius: 10px;
+  object-fit: cover; /* maintains aspect ratio and crop if needed */
+}
+
+
+    .text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .text p {
+      font-size: 1.2rem;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInMove {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1 -->
+  <section>
+    <div class="text">
+     <h2>1. Instant Gratification from Screens</h2>
+     <p>Scrolling Instagram, watching YouTube shorts, or playing games — these actions give your brain fast dopamine.</p>
+     <p>Unlike reading a book or working on a goal, screens offer instant pleasure with little effort.</p>
+     <p>This keeps you hooked, and your brain starts preferring the screen over real-life tasks.</p>
+
+      <!-- <a href="extra.html">Learn More</a> -->
+    </div>
+    <div class="video">
+      <video src="video1.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="reverse">
+    <div class="text">
+    <h2>2. Children and Early Addiction</h2>
+    <p>Many children cry and scream when phones are taken away — this is not just drama, it’s dopamine addiction.</p>
+    <p>Cartoons and mobile games are designed to be hyper-stimulating, releasing high amounts of dopamine.</p>
+    <p>When parents give phones to stop crying, they unintentionally train the child’s brain to seek pleasure from screens only.</p>
+<!-- <a href="extra.html">Learn More</a> -->
+    </div>
+    <div class="video">
+      <video src="video2.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <div class="text">
+    <h2>3. Rewiring the Brain’s Reward System</h2>
+    <p>Too much screen time makes it hard to enjoy normal activities like studying or going for a walk.</p>
+    <p>To fix this, we need to reduce fast dopamine hits and reintroduce slow-reward activities like hobbies, exercise, and deep work.</p>
+    <p>This helps the brain reset and rebuild a healthy balance between effort and reward.</p>
+ </div>
+    <div class="video">
+      <video src="video3.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+
+</body>
+</html>

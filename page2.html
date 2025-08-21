@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradient Background Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #5f2c82);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 50px;
+      height: 100vh;
+      flex-wrap: wrap;
+    }
+
+    .text, .video {
+      width: 45%;
+      padding: 20px;
+      color: white;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInMove 1.2s ease-in forwards;
+    }
+
+    .text {
+      animation-delay: 0.2s;
+    }
+
+    .video {
+      animation-delay: 0.4s;
+    }
+
+    .video video,
+    .video img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      max-height: 500px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .text p {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInMove {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      section {
+        flex-direction: column;
+        height: auto;
+        padding: 60px 20px;
+      }
+
+      .text, .video {
+        width: 100%;
+      }
+
+      .text h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1 -->
+  <section>
+    <div class="text">
+      <h2>Survival Instincts of Early Humans</h2>
+      <p>Early humans had to hunt, gather, and survive in harsh environments. Their brains evolved to save energy for the next big danger (like hunting or escaping predators). This “energy-saving mode” became part of our brain’s wiring.</p>
+      <p>When you repeat the same feel-good thing too often (like scrolling, gaming, sugar), your brain gets used to high dopamine.</p>
+    </div>
+    <div class="video">
+      <img src="ancient people.jpg" alt="Ancient People">
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="reverse">
+    <div class="text">
+      <h2>2. Modern Life vs. Ancient Brain</h2>
+      <p>Today, we don’t need to hunt — food and comfort are everywhere.</p>
+      <p>But our brain still behaves like we’re in survival mode.</p>
+      <p>It avoids hard tasks (like studying, exercising) and chooses low-energy, high-reward actions.</p>
+    </div>
+    <div class="video">
+      <img src="stone-age-hand-drawn-illustration_23-2150079536.jpg" alt="Ancient People">
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <div class="text">
+      <h2>3. Dopamine’s Role in Laziness and Procrastination</h2>
+      <p>Easy actions (like watching videos or scrolling) give fast dopamine.</p>
+      <p>Hard actions (like working or learning) give slow dopamine.</p>
+      <p>So, the brain picks what's easier — even if it's unproductive.</p>
+    </div>
+    <div class="video">
+      <img src="ancient people stone.jpg" alt="Ancient People">
+    </div>
+  </section>
+
+</body>
+</html>
